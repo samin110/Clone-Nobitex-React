@@ -3,69 +3,108 @@ import React from "react";
 function Crypto() {
   return (
     <section>
-      <div className='w-11/12 mx-auto bg-slate-300 h-96'>
-        <div className='w-[200px] bg-white'>
-          <div className='flex'>
-            <div>انتخاب بازار براساس</div>
-            <div>
-              <button>تومان IRT</button>
-              <button>تتر USDT</button>
+      {/* Start container */}
+      <div className='w-11/12 mx-auto bg-red-200 h-96'>
+        {/* Choice market */}
+        <div className='w-[350px] bg-white text-base h-16 flex items-center rounded-t-xl'>
+          <div className='flex justify-around w-full'>
+            <div className='flex items-center'>انتخاب بازار براساس</div>
+            <div className='flex '>
+              <button className='px-4 py-2 rounded-tr rounded-br bg-slate-500'>
+                تومان IRT
+              </button>
+              <button className='px-4 py-2 rounded-tl rounded-bl bg-slate-500'>
+                تتر USDT
+              </button>
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-5 bg-green-300 grid-rows-8'>
-          <div className='grid grid-flow-row grid-cols-5 col-start-1 col-end-6 text-[12px] text-[#A3A5A8]'>
+        {/* Start header for table */}
+        <div className='  p-2'>
+          <div className='bg-yellow-300 grid grid-cols-3 gap-7'>
             <div className='col-start-1 col-end-2'>نام</div>
-            <div className='col-start-2 col-end-3'>آخرین قیمت</div>
-            <div className='col-start-3 col-end-4'>تغییر 24h</div>
-            <div className='col-start-4 col-end-5'>نمودار هفتگی</div>
-          </div>
-          <div className='grid grid-flow-row grid-cols-5 col-start-1 col-end-6'>
-            <div className='col-start-1 col-end-2'>نام</div>
-            <div className='col-start-2 col-end-3'>آخرین قیمت</div>
-            <div className='col-start-3 col-end-4'>تغییر 24h</div>
-            <div className='col-start-4 col-end-5'>نمودار هفتگی</div>
-            <div className='col-start-5 col-end-6'>
-              <button>خرید و فروش</button>
+            <div className='grid grid-flow-col col-start-2 col-end-3'>
+              <div>آخرین قیمت</div>
+              <div>تغییر 24h</div>
+            </div>
+            <div className='grid grid-flow-col'>
+              <div>نمودار هفتگی</div>
+              <div>خرید و فروش</div>
             </div>
           </div>
-          <div className='grid grid-flow-row grid-cols-5 col-start-1 col-end-6'>
+        </div>
+        {/* End header for table */}
+        <div className='  p-2'>
+          <div className='bg-yellow-300 grid grid-cols-3 gap-7 p-5'>
             <div className='col-start-1 col-end-2'>نام</div>
-            <div className='col-start-2 col-end-3'>آخرین قیمت</div>
-            <div className='col-start-3 col-end-4'>تغییر 24h</div>
-            <div className='col-start-4 col-end-5'>نمودار هفتگی</div>
-            <div className='col-start-5 col-end-6'>نمودار هفتگی</div>
+            <div className='grid grid-flow-col col-start-2 col-end-3'>
+              <div>آخرین قیمت</div>
+              <div>تغییر 24h</div>
+            </div>
+            <div className='grid grid-flow-col'>
+              <div>نمودار هفتگی</div>
+              <div>خرید و فروش</div>
+            </div>
           </div>
-          <div className='grid grid-flow-row grid-cols-5 col-start-1 col-end-6'>
+        </div>
+
+        <div className='  p-2'>
+          <div className='grid grid-cols-3 gap-7'>
             <div className='col-start-1 col-end-2'>نام</div>
-            <div className='col-start-2 col-end-3'>آخرین قیمت</div>
-            <div className='col-start-3 col-end-4'>تغییر 24h</div>
-            <div className='col-start-4 col-end-5'>نمودار هفتگی</div>
-            <div className='col-start-5 col-end-6'>نمودار هفتگی</div>
+            <div className='grid grid-flow-col col-start-2 col-end-3'>
+              <div>آخرین قیمت</div>
+              <div>تغییر 24h</div>
+            </div>
+            <div className='grid grid-flow-col'>
+              <div>نمودار هفتگی</div>
+              <div>خرید و فروش</div>
+            </div>
           </div>
-          <div className='grid grid-flow-row grid-cols-5 col-start-1 col-end-6'>
+        </div>
+
+        <div className='  p-2'>
+          <div className='bg-yellow-300 grid grid-cols-3 gap-7'>
             <div className='col-start-1 col-end-2'>نام</div>
-            <div className='col-start-2 col-end-3'>آخرین قیمت</div>
-            <div className='col-start-3 col-end-4'>تغییر 24h</div>
-            <div className='col-start-4 col-end-5'>نمودار هفتگی</div>
-            <div className='col-start-5 col-end-6'>نمودار هفتگی</div>
+            <div className='grid grid-flow-col col-start-2 col-end-3'>
+              <div>آخرین قیمت</div>
+              <div>تغییر 24h</div>
+            </div>
+            <div className='grid grid-flow-col'>
+              <div>نمودار هفتگی</div>
+              <div>خرید و فروش</div>
+            </div>
           </div>
-          <div className='grid grid-flow-row grid-cols-5 col-start-1 col-end-6'>
+        </div>
+
+        <div className='  p-2'>
+          <div className='bg-yellow-300 grid grid-cols-3 gap-7'>
             <div className='col-start-1 col-end-2'>نام</div>
-            <div className='col-start-2 col-end-3'>آخرین قیمت</div>
-            <div className='col-start-3 col-end-4'>تغییر 24h</div>
-            <div className='col-start-4 col-end-5'>نمودار هفتگی</div>
-            <div className='col-start-5 col-end-6'>نمودار هفتگی</div>
+            <div className='grid grid-flow-col col-start-2 col-end-3'>
+              <div>آخرین قیمت</div>
+              <div>تغییر 24h</div>
+            </div>
+            <div className='grid grid-flow-col'>
+              <div>نمودار هفتگی</div>
+              <div>خرید و فروش</div>
+            </div>
           </div>
-          <div className='grid grid-flow-row grid-cols-5 col-start-1 col-end-6'>
+        </div>
+
+        <div className='  p-2'>
+          <div className='bg-yellow-300 grid grid-cols-3 gap-7'>
             <div className='col-start-1 col-end-2'>نام</div>
-            <div className='col-start-2 col-end-3'>آخرین قیمت</div>
-            <div className='col-start-3 col-end-4'>تغییر 24h</div>
-            <div className='col-start-4 col-end-5'>نمودار هفتگی</div>
-            <div className='col-start-5 col-end-6'>نمودار هفتگی</div>
+            <div className='grid grid-flow-col col-start-2 col-end-3'>
+              <div>آخرین قیمت</div>
+              <div>تغییر 24h</div>
+            </div>
+            <div className='grid grid-flow-col'>
+              <div>نمودار هفتگی</div>
+              <div>خرید و فروش</div>
+            </div>
           </div>
         </div>
       </div>
+      {/* End container */}
     </section>
   );
 }
