@@ -9,10 +9,54 @@
   }
 
   @font-face {
+    font-family: "vazir-num";
+    src: url(../public/assets/fonts/vazir-num.woff2);
+  }
+
+  @font-face {
     font-family: "vazir-bold";
     src: url(../public/assets/fonts/vazir-bold.woff2);
   }
   html {
     font-family: "vazir-light";
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+/*** Custome Swiper Slider ***/
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #784ed1;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  border-radius: 100%;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+.swiper-button-next {
+  left: 30px !important;
+}
+.swiper-button-prev {
+  right: 30px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #784ed1 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1rem !important;
+}
+.swiper-pagination {
+  margin-top: 10rem;
+}
+/*** Custome Swiper Slider ***/
+
+.dir-left {
+  direction: ltr;
 }

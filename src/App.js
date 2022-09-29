@@ -1,14 +1,23 @@
 import "./App.css";
-import Header from "./Components/Header";
-import Crypto from "./Components/Crypto/Crypto";
-import Navbar from "./Components/Navbar/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import HomePage from "./pages/HomePage";
+import CryptoDetailPage from "./pages/CryptoDetailPage";
+import CryptoContext from "./Context/CryptoContext";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Header />
-      <Crypto />
+      <BrowserRouter>
+        <CryptoContext>
+          <Layout>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='crypto/:id' element={<CryptoDetailPage />} />
+            </Routes>
+          </Layout>
+        </CryptoContext>
+      </BrowserRouter>
     </div>
   );
 }

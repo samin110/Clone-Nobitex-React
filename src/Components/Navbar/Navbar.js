@@ -15,11 +15,11 @@ function Navbar() {
           className='hidden md:flex'
           onClick={() => setShowDropMenu(!showDropMenu)}
         >
-          <img src='assets/images/menu.png' className='w-6' />
+          <img src='../../../assets/images/menu.png' className='w-6' />
         </button>
         <div className='flex items-center'>
           <img
-            src='assets/images/navbar-logo.png'
+            src='../../../assets/images/navbar-logo.png'
             className='w-[42px] md:w-9'
           />
           <div className='mr-5 text-xl md:text-sm'>نوبیتکس</div>
@@ -31,7 +31,7 @@ function Navbar() {
           className={
             !showDropMenu
               ? "md:hidden flex text-base gap-12"
-              : " md:fixed md:left-0 md:top-0 md:flex-col font-vazirLight md:text-sm md:gap-0 md:bg-[#14151a] md:h-screen md:w-7/12 flex text-base gap-12"
+              : " md:fixed md:left-0 md:top-0 md:z-30 md:flex-col font-vazirLight md:text-sm md:gap-0 md:bg-[#14151a] md:h-screen md:w-7/12 flex text-base gap-12"
           }
         >
           <li className='flex-col hidden gap-3 text-base md:flex md:p-5'>
@@ -56,7 +56,7 @@ function Navbar() {
             {/*Start Nested Menu */}
             <ul
               className='md:static md:bg-[#1e2026] group-hover:inline  bg-[#1e2026] md:w-full 
-                         rounded-md absolute top-6 right-4 w-40 hidden text-white ease-in-out duration-700'
+                         rounded-md absolute top-6 right-4 w-40 hidden text-white ease-in-out duration-700 z-20'
             >
               <li className=' p-3 hover:bg-[#292c34] hover:text-[#15d1c6] rounded-t  ease-linear duration-100'>
                 بیت&#8202;کوین
