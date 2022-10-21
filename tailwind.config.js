@@ -25,6 +25,10 @@ module.exports = {
 
       backgroundImage: {
         "header-image": "url('/public/assets/images/jumbotron.3ceb851.svg')",
+        "statistics-image":
+          "url('/public/assets/images/by-numbers-bg.1a5659f.webp')",
+        "header-image-cryptoListPage":
+          "url('/public/assets/images/header-background.3e7b9ea.svg')",
       },
       gridTemplateRows: {
         // Simple 8 row grid

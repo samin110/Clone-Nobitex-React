@@ -3,6 +3,7 @@ import { FaCaretDown } from "react-icons/fa";
 import { MdInsertChart, MdOutlineGroupAdd } from "react-icons/md";
 import { IoDocumentText } from "react-icons/io5";
 import { BsFillQuestionCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showDropMenu, setShowDropMenu] = useState(false);
@@ -17,13 +18,15 @@ function Navbar() {
         >
           <img src='../../../assets/images/menu.png' className='w-6' />
         </button>
-        <div className='flex items-center'>
-          <img
-            src='../../../assets/images/navbar-logo.png'
-            className='w-[42px] md:w-9'
-          />
-          <div className='mr-5 text-xl md:text-sm'>نوبیتکس</div>
-        </div>
+        <Link to='/'>
+          <div className='flex items-center'>
+            <img
+              src='../../../assets/images/navbar-logo.png'
+              className='w-[42px] md:w-9'
+            />
+            <div className='mr-5 text-xl md:text-sm'>نوبیتکس</div>
+          </div>
+        </Link>
         {/* End Logo */}
 
         {/* Start Navbar List */}

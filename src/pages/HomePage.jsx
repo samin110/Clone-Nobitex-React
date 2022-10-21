@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "../Components/Header";
-import CryptoTable from "../Components/Crypto/CryptoTable";
+import CryptoTableHomePage from "../Components/CryptoTableHomePage/CryptoTableHomePage";
 import Slider from "../Components/Slider/Slider";
+import Advantages from "../Components/Advantages/Advantages";
+import Statistics from "../Components/Statistics/Statistics";
 
 const HomePage = () => {
   return (
     <div>
       <Header />
-      <CryptoTable />
+      <CryptoTableHomePage />
       <Slider />
+      <Advantages />
+      <Statistics />
     </div>
   );
 };

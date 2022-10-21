@@ -12,7 +12,7 @@ import { Pagination, Navigation } from "swiper";
 
 function Slider() {
   return (
-    <div className='px-16 bg-gray-200 bg-opacity-50 py-14 h-96'>
+    <div className='px-16 bg-gray-100 py-14 h-96 '>
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
@@ -22,7 +22,7 @@ function Slider() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className='h-full mySwiper'
+        className='h-full mySwiper bg-gray-100'
       >
         <SwiperSlide className='flex items-center justify-center '>
           <div className='rounded-md w-72'>

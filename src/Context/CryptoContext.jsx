@@ -1,18 +1,19 @@
 import React from "react";
 import { createContext, useState } from "react";
 
-export const cryptoPriceContext = createContext();
-export const cryptoPriceContextDispatcher = createContext();
+export const cryptoContext = createContext();
+export const cryptoContextDispatch = createContext();
 
 const CryptoContext = ({ children }) => {
-  const [getCryptoDetailFromApi, setGetCryptoDetailFromApi] = useState([]);
+  const [getCryptoDataFromApiForHomePageTable, setGetCryptoDataFromApiForHomePageTable] = useState([]);
+  const [getDataFromApiForPagination, setGetDataFromApiForPagination] = useState([]);
 
   return (
-    <cryptoPriceContext.Provider value={getCryptoDetailFromApi}>
-      <cryptoPriceContextDispatcher.Provider value={setGetCryptoDetailFromApi}>
+    <cryptoContext.Provider value={{ getCryptoDataFromApiForHomePageTable, getDataFromApiForPagination }}>
+      <cryptoContextDispatch.Provider value={{ setGetCryptoDataFromApiForHomePageTable, setGetDataFromApiForPagination }}>
         {children}
-      </cryptoPriceContextDispatcher.Provider>
-    </cryptoPriceContext.Provider>
+      </cryptoContextDispatch.Provider>
+    </cryptoContext.Provider>
   );
 };
 
