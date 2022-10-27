@@ -12,6 +12,7 @@ const HomePage = () => {
       <CryptoTableHomePage />
       <Slider />
       <Advantages />
+
       <Statistics />
     </div>
   );

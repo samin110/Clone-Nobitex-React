@@ -110,9 +110,9 @@ function CryptoListPage() {
             if (highestPrice24h != crypto) {
               setHighestPrice24h(crypto);
             }
-          } else if (minPrice < 0 && maxPrice < 0) {
-            console.log(123);
           }
+        } else if (minPrice < 0 && maxPrice < 0) {
+          alert("تمام ارزها منفی هستند!!!");
         }
       });
   }
@@ -153,18 +153,22 @@ function CryptoListPage() {
       <section className='bg-[#1e2026]  w-full h-[350px] relative overflow-hidden'>
         <div
           className='w-[100%] h-full bg-no-repeat bg-left 
-                     bg-header-image-cryptoListPage absolute -left-[13rem] opacity-50'></div>
+                     bg-header-image-cryptoListPage absolute -left-[13rem] opacity-50'
+        ></div>
 
         <div className='flex flex-col justify-end h-full pb-16'>
           <h1 className='text-5xl font-bold tracking-wide text-center text-white'>قیمت لحظه‌ای رمزارزهای نوبیتکس</h1>
-          <h3 className='mt-3 mb-5 text-lg tracking-wide text-center text-gray-300'>همه قیمت های بازار نوبیتکس را یکجا ببینید</h3>
+          <h3 className='mt-3 mb-5 text-lg tracking-wide text-center text-gray-300'>
+            همه قیمت های بازار نوبیتکس را یکجا ببینید
+          </h3>
         </div>
       </section>
       {/* Card */}
       <div className='flex bg-gray-100 h-44 justify-evenly'>
         <div
           className='bg-white  flex rounded-md items-center -translate-y-12 w-[407px]
-         justify-center  shadow-[0_2px_10px_rgba(20,21,260,0.1)]'>
+         justify-center  shadow-[0_2px_10px_rgba(20,21,260,0.1)]'
+        >
           <div className='flex flex-col h-full justify-evenly'>
             <h2 className='text-xl'>بیشترین افزایش قیمت 24h</h2>
             <div className='flex'>
@@ -185,7 +189,8 @@ function CryptoListPage() {
 
         <div
           className='bg-white  flex rounded-md items-center -translate-y-12 w-[407px]
-         justify-center  shadow-[0_2px_10px_rgba(20,21,260,0.1)]'>
+         justify-center  shadow-[0_2px_10px_rgba(20,21,260,0.1)]'
+        >
           <div className='flex flex-col h-full justify-evenly'>
             <h2 className='text-xl'>بیشترین حجم معامله 24h</h2>
             <div className='flex'>
@@ -193,7 +198,8 @@ function CryptoListPage() {
               <div className='flex flex-col justify-center mr-2'>
                 <p className='text-base font-semibold'>{highestVolume24h && highestVolume24h.name.toUpperCase()}</p>
                 <p className='text-lg'>
-                  <span className='mr-2 text-base text-gray-400'>USD</span> {highestVolume24h && highestVolume24h.current_price}
+                  <span className='mr-2 text-base text-gray-400'>USD</span>{" "}
+                  {highestVolume24h && highestVolume24h.current_price}
                 </p>
               </div>
             </div>
@@ -205,18 +211,23 @@ function CryptoListPage() {
 
         <div
           className='bg-white  flex rounded-md items-center -translate-y-12 w-[407px]
-         justify-center  shadow-[0_2px_10px_rgba(20,21,260,0.1)]'>
+         justify-center  shadow-[0_2px_10px_rgba(20,21,260,0.1)]'
+        >
           <div className='flex flex-col h-full justify-evenly'>
             <h2 className='text-xl'>جدیدترین رمزارز نوبیتکس</h2>
             <div className='flex'>
-              <img src={getDataFromApiForPagination.length > 0 ? getDataFromApiForPagination[6].image : " "} className='w-14' />
+              <img
+                src={getDataFromApiForPagination.length > 0 ? getDataFromApiForPagination[6].image : " "}
+                className='w-14'
+              />
               <div className='flex flex-col justify-center mr-2'>
                 <p className='text-base font-semibold'>
                   {getDataFromApiForPagination.length > 0 && getDataFromApiForPagination[6].name.toUpperCase()}
                 </p>
                 <p className='text-lg'>
                   <span className='mr-2 text-base text-gray-400'>USD</span>
-                  {getDataFromApiForPagination.length > 0 && getDataFromApiForPagination[6].current_price.toLocaleString()}
+                  {getDataFromApiForPagination.length > 0 &&
+                    getDataFromApiForPagination[6].current_price.toLocaleString()}
                 </p>
               </div>
             </div>
@@ -234,7 +245,8 @@ function CryptoListPage() {
         {/* Choice market */}
         <div
           className='w-[350px] bg-white text-base h-14 flex items-end 
-          rounded-t-xl shadow-[0_-10px_10px_rgba(20,21,26,0.1)]'>
+          rounded-t-xl shadow-[0_-10px_10px_rgba(20,21,26,0.1)]'
+        >
           <div className='flex justify-around w-full'>
             <div className='flex items-center'>انتخاب بازار براساس</div>
             <div className='flex '>
@@ -268,7 +280,9 @@ function CryptoListPage() {
 
             {/* Ctypto List Component*/}
             {getDataFromApiForPagination.length > 0 ? (
-              getDataFromApiForPagination.map((item) => <Pagination item={item} tableNumber={(tableNumber += 1)} key={item.id} />)
+              getDataFromApiForPagination.map((item) => (
+                <Pagination item={item} tableNumber={(tableNumber += 1)} key={item.id} />
+              ))
             ) : (
               //  Load Spinner
               <div className='flex items-center justify-center h-[500px]'>
@@ -283,7 +297,7 @@ function CryptoListPage() {
 
       {/* Buttons for next/previouse page*/}
       {/* Render Pagination Buttons */}
-      <ul className='flex justify-center h-24 font-sans bg-gray-100'>{paginationButton([1, 2, 3, 4, 5])}</ul>
+      <ul className='flex justify-center h-24 font-sans  bg-gray-100'>{paginationButton([1, 2, 3, 4, 5])}</ul>
       {/* *** END ==> Cryptocurrency list  */}
 
       {/* Card image Horizonta */}
@@ -295,13 +309,15 @@ function CryptoListPage() {
           <div className='w-11/12'>
             <h1 className='mb-8 text-3xl font-semibold'>قیمت ارز دیجیتال در بازار نوبیتکس چطور محاسبه می‌شود؟</h1>
             <p className='text-lg leading-8 text-justify'>
-              قیمت ارز دیجیتال در بازار ایران، تابع قیمت جهانی ارزهای دیجیتـــــــــال و قیمت ارز در ایران است. از آنجایی‌ که غالب معاملات ارز دیجیتال
-              در دنیــــــــــــا با تتر انجام می‌شود؛ بنابراین قیمت لحظه‌ای ارز دیجیتال به ریال از حاصل‌ضرب قیمت آن به تتـــــــر در بازارهای جهانی،
-              در قیمت تتر به ریال در ایران به دست می‌آید. برخلاف تصور عموم، قیمت تتر معادل قیمت دلار نقــــــدی گزارش‌شده از سوی بانک مرکزی یا حتی در
-              بازار آزاد ایران نیست. بلکه بر اساس عرضه و تقاضــــــا در بازارهای ایرانی به دست می‌آید. اما برای یک تخمین مناسب از قیمت تتر، در تبدیل
-              هر دلار آمریکا به تتر در بازارهای جهانی، هزینه‌ای بین 3 تا 7 درصد بسته بـه روش واریز، به‌صورت معمول کسر خواهد شد. به‌این‌ترتیب قیمت
-              لحظه‌ای ارز دیجیتال در نوبیتکس با قیمت ارز دیجیتال در بازار جهانی دارای تفاوت محسوسی نیست و قیمت لحظه‌ای ارز دیجیتال به ریال نیز برحسب
-              تغییر قیمت تتر، تغییر خواهد کرد.
+              قیمت ارز دیجیتال در بازار ایران، تابع قیمت جهانی ارزهای دیجیتـــــــــال و قیمت ارز در ایران است. از
+              آنجایی‌ که غالب معاملات ارز دیجیتال در دنیــــــــــــا با تتر انجام می‌شود؛ بنابراین قیمت لحظه‌ای ارز
+              دیجیتال به ریال از حاصل‌ضرب قیمت آن به تتـــــــر در بازارهای جهانی، در قیمت تتر به ریال در ایران به دست
+              می‌آید. برخلاف تصور عموم، قیمت تتر معادل قیمت دلار نقــــــدی گزارش‌شده از سوی بانک مرکزی یا حتی در بازار
+              آزاد ایران نیست. بلکه بر اساس عرضه و تقاضــــــا در بازارهای ایرانی به دست می‌آید. اما برای یک تخمین مناسب
+              از قیمت تتر، در تبدیل هر دلار آمریکا به تتر در بازارهای جهانی، هزینه‌ای بین 3 تا 7 درصد بسته بـه روش
+              واریز، به‌صورت معمول کسر خواهد شد. به‌این‌ترتیب قیمت لحظه‌ای ارز دیجیتال در نوبیتکس با قیمت ارز دیجیتال در
+              بازار جهانی دارای تفاوت محسوسی نیست و قیمت لحظه‌ای ارز دیجیتال به ریال نیز برحسب تغییر قیمت تتر، تغییر
+              خواهد کرد.
             </p>
           </div>
         </div>
